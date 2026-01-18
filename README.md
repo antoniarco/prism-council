@@ -13,7 +13,7 @@ PRISM Council is a core mechanism within the broader **PRISM** framework, which 
 
 > **PRISM transforms prompting into a structured, multi-model deliberation process that delivers consensus-driven, high-confidence AI outputs.**
 
-![PRISM Council Architecture](docs/prism-architecture.png)
+![PRISM Council Architecture](docs/PRISM_Council_Architecture_header.jpg)
 *Five-stage deliberation pipeline: Intent & Context Alignment → Dynamic Model Orchestration → Parallel Independent Reasoning → Blind Peer Evaluation → Consensus Synthesis*
 
 ---
