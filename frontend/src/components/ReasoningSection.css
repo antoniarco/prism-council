@@ -1,0 +1,203 @@
+/**
+ * Unified Reasoning Section Component
+ * Provides consistent structure for all sections in the Reasoning document view.
+ */
+
+.reasoning-section {
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius);
+  margin-bottom: 16px;
+  overflow: hidden;
+  max-width: 92ch;
+}
+
+.reasoning-section details {
+  display: block;
+}
+
+.reasoning-section summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.reasoning-section summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Section Header - Unified across all sections */
+.reasoning-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  border-bottom: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.reasoning-section-header:hover {
+  background: rgba(31, 35, 40, 0.02);
+}
+
+.reasoning-section details[open] .reasoning-section-header {
+  border-bottom-color: var(--ds-border);
+}
+
+/* Section Title - Document-style hierarchy */
+.reasoning-section-title {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: rgba(31, 35, 40, 0.65);
+  line-height: 1.3;
+}
+
+/* Section Metadata - Secondary information */
+.reasoning-section-meta {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(31, 35, 40, 0.5);
+  letter-spacing: 0.3px;
+}
+
+/* Section Body - Consistent padding and spacing */
+.reasoning-section-body {
+  padding: 20px;
+}
+
+/* Subsection Grid - For analytical content blocks */
+.reasoning-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .reasoning-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Subsection Cards - Nested analytical blocks */
+.reasoning-card {
+  padding: 14px 16px;
+  background: rgba(31, 35, 40, 0.02);
+  border: 1px solid var(--ds-border);
+  border-radius: 6px;
+}
+
+.reasoning-card-title {
+  font-size: 11px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: rgba(31, 35, 40, 0.55);
+  margin-bottom: 10px;
+}
+
+.reasoning-card-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ds-text);
+  margin: 0;
+}
+
+/* Lists - Consistent formatting */
+.reasoning-list {
+  margin: 0;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.reasoning-list li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ds-text);
+  margin-bottom: 6px;
+}
+
+.reasoning-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Progressive Disclosure - Nested details */
+.reasoning-disclosure {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ds-border);
+}
+
+.reasoning-disclosure summary {
+  font-size: 12px;
+  font-weight: 650;
+  color: rgba(31, 35, 40, 0.65);
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color 0.15s;
+}
+
+.reasoning-disclosure summary:hover {
+  color: var(--ds-text);
+}
+
+.reasoning-disclosure[open] summary {
+  margin-bottom: 12px;
+}
+
+/* Pre-formatted text - For raw output */
+.reasoning-pre {
+  margin: 12px 0 0 0;
+  padding: 14px;
+  background: rgba(31, 35, 40, 0.03);
+  border: 1px solid var(--ds-border);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(31, 35, 40, 0.75);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+/* Loading indicators - Subtle and consistent */
+.reasoning-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  color: rgba(31, 35, 40, 0.55);
+  font-size: 13px;
+}
+
+.reasoning-loading .spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(31, 35, 40, 0.1);
+  border-top-color: rgba(31, 35, 40, 0.4);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Muted text - For empty states */
+.reasoning-muted {
+  font-size: 13px;
+  color: rgba(31, 35, 40, 0.5);
+  font-style: italic;
+}
+
+
+
+
+
+
+
+

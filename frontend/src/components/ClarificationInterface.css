@@ -1,0 +1,232 @@
+.clarification-panel {
+  background: var(--ds-surface-2);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius);
+  padding: 16px;
+  color: var(--ds-text);
+  max-width: 80%;
+}
+
+.clarification-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ds-text);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 6px;
+}
+
+.clarification-subtitle {
+  font-size: 13px;
+  color: var(--ds-muted);
+  margin-bottom: 14px;
+}
+
+.clarification-question {
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.clarification-question-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.clarification-question-number {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.clarification-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid #e0e0e0;
+  color: #666;
+  background: #fff;
+}
+
+.clarification-pill.is-required {
+  border-color: #f5c2c7;
+  background: #fff5f5;
+  color: #b02a37;
+}
+
+.clarification-pill.is-optional {
+  border-color: #b7e1c1;
+  background: #f3fbf6;
+  color: #1e7e34;
+}
+
+.clarification-question-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.clarification-question-rationale {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.clarification-muted {
+  color: #666;
+  font-weight: 600;
+}
+
+.clarification-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clarification-input {
+  width: 100%;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  color: #333;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.5;
+  outline: none;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.clarification-input:focus {
+  border-color: var(--ds-accent);
+  box-shadow: 0 0 0 4px var(--ds-accent-weak);
+}
+
+.clarification-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #f5f5f5;
+}
+
+.clarification-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.clarification-primary-btn {
+  padding: 12px 18px;
+  background: var(--ds-accent);
+  border: 1px solid var(--ds-accent);
+  border-radius: var(--ds-radius-sm);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.clarification-primary-btn:hover:not(:disabled) {
+  background: #b65f33;
+  border-color: #b65f33;
+}
+
+.clarification-primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Briefing */
+.clarification-briefing {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.clarification-section {
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius);
+  padding: 12px;
+}
+
+.clarification-section-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ds-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+}
+
+.clarification-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ds-text);
+}
+
+.clarification-pre {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ds-text);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.clarification-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ds-text);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Raw brief (collapsed by default) */
+.clarification-raw {
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius);
+  padding: 12px;
+}
+
+.clarification-raw-summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ds-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+}
+
+.clarification-raw-summary::-webkit-details-marker {
+  display: none;
+}
+
+.clarification-raw-summary::before {
+  content: '▸';
+  display: inline-block;
+  width: 18px;
+  color: var(--ds-muted);
+}
+
+details[open] > .clarification-raw-summary::before {
+  content: '▾';
+}
+

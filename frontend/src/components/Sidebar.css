@@ -1,0 +1,150 @@
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--bg-surface);
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-header {
+  padding: var(--spacing-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.new-conversation-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: 10px var(--spacing-4);
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  transition: all var(--timing-fast) var(--easing-standard);
+}
+
+.new-conversation-btn:hover {
+  background: var(--bg-surface-hover);
+  border-color: var(--border-default);
+}
+
+.new-conversation-btn .icon {
+  color: currentColor;
+}
+
+.archive-group {
+  margin-bottom: var(--spacing-4);
+}
+
+.archive-group-label {
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding: var(--spacing-2) var(--spacing-3);
+}
+
+.conversation-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-2) var(--spacing-2);
+}
+
+.no-conversations {
+  padding: var(--spacing-6) var(--spacing-4);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.conversation-item {
+  padding: var(--spacing-3);
+  margin-bottom: var(--spacing-1);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--timing-fast) var(--easing-standard);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.conversation-item:hover {
+  background: var(--bg-surface-hover);
+}
+
+.conversation-item.active {
+  background: var(--accent-subtle);
+  border-color: var(--border-subtle);
+}
+
+.conversation-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.conversation-title {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conversation-meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-tertiary);
+  font-size: 11px;
+}
+
+.conversation-meta .icon {
+  color: var(--text-tertiary);
+}
+
+.conversation-meta span {
+  line-height: 1;
+}
+
+.delete-conversation-btn {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: var(--spacing-1);
+  border-radius: var(--radius-xs);
+  opacity: 0;
+  transition: all var(--timing-fast) var(--easing-standard);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.conversation-item:hover .delete-conversation-btn {
+  opacity: 1;
+}
+
+.delete-conversation-btn:hover {
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+}
+
+.delete-conversation-btn .icon {
+  color: currentColor;
+}

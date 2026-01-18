@@ -1,0 +1,123 @@
+.context-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.context-selector-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #495057;
+  transition: all 0.2s;
+}
+
+.context-selector-btn:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.context-icon {
+  font-size: 16px;
+}
+
+.dropdown-arrow {
+  margin-left: 4px;
+  font-size: 10px;
+  color: #6c757d;
+}
+
+.context-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  max-width: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.context-dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #e9ecef;
+  font-weight: 600;
+  font-size: 14px;
+  color: #495057;
+}
+
+.manage-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.manage-btn:hover {
+  background-color: #0056b3;
+}
+
+.context-options {
+  padding: 8px 0;
+}
+
+.context-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.context-option:hover {
+  background-color: #f8f9fa;
+}
+
+.context-option.selected {
+  background-color: #e7f3ff;
+}
+
+.context-option-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #212529;
+  margin-bottom: 4px;
+}
+
+.context-option-desc {
+  font-size: 12px;
+  color: #6c757d;
+  line-height: 1.4;
+}
+
+.no-contexts-message {
+  padding: 20px;
+  text-align: center;
+  color: #6c757d;
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,453 @@
+/* Settings uses the same page scaffolding + card visuals as Contexts/Roles.
+   This file only contains settings-specific layout polish. */
+
+.settings-alert {
+  margin-bottom: 14px;
+}
+
+.settings-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 12px;
+}
+
+.settings-details {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--ds-border);
+}
+
+.settings-help {
+  font-size: 12px;
+  line-height: 1.65;
+  color: rgba(31, 35, 40, 0.62);
+  margin-bottom: 12px;
+  max-width: 85ch;
+}
+
+.settings-edit-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-readonly-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings-pre {
+  margin-top: 0;
+}
+
+.settings-hint {
+  font-size: 12px;
+  color: rgba(31, 35, 40, 0.55);
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.settings-field-label {
+  font-size: 12px;
+  font-weight: 650;
+  color: rgba(31, 35, 40, 0.6);
+}
+
+.settings-kv {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--ds-border);
+  border-radius: 10px;
+  background: var(--ds-surface-2);
+}
+
+.settings-k {
+  font-size: 12px;
+  font-weight: 650;
+  color: rgba(31, 35, 40, 0.6);
+}
+
+.settings-v {
+  font-size: 13px;
+  color: rgba(31, 35, 40, 0.85);
+}
+
+/* Council Models */
+.model-list-readonly {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.model-item-readonly {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: 6px;
+}
+
+.model-icon {
+  font-size: 20px;
+}
+
+.model-name {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 14px;
+  color: var(--ds-text);
+}
+
+.model-list-editable {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.model-item-editable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: 6px;
+}
+
+.model-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.btn-icon {
+  background: transparent;
+  border: 1px solid var(--ds-border);
+  color: var(--ds-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.btn-icon:hover:not(:disabled) {
+  background: rgba(31, 35, 40, 0.04);
+  border-color: var(--ds-border-strong);
+  color: var(--ds-text);
+}
+
+.btn-icon:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-icon.btn-danger {
+  color: var(--ds-muted);
+  border-color: var(--ds-border);
+}
+
+.btn-icon.btn-danger:hover:not(:disabled) {
+  background: rgba(31, 35, 40, 0.06);
+  color: var(--ds-text);
+}
+
+.add-model-form {
+  display: flex;
+  gap: 12px;
+}
+
+.model-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--ds-border-strong);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.model-input:focus {
+  outline: none;
+  border-color: var(--ds-border-strong);
+}
+
+/* Chairman Model */
+.chairman-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--ds-border-strong);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  background: var(--ds-surface);
+  cursor: pointer;
+}
+
+.chairman-select:focus {
+  outline: none;
+  border-color: var(--ds-border-strong);
+}
+
+.chairman-readonly {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: 6px;
+}
+
+.chairman-icon {
+  font-size: 20px;
+}
+
+.chairman-name {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 14px;
+  color: var(--ds-text);
+  font-weight: 600;
+}
+
+/* Clarification-First Mode */
+.clarification-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px 16px;
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.toggle-label:hover {
+  border-color: var(--ds-border-strong);
+}
+
+.toggle-checkbox {
+  width: 44px;
+  height: 24px;
+  appearance: none;
+  background: #ced4da;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-checkbox:checked {
+  background: var(--ds-accent);
+}
+
+.toggle-checkbox::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  top: 3px;
+  left: 3px;
+  transition: all 0.3s;
+}
+
+.toggle-checkbox:checked::before {
+  left: 23px;
+}
+
+.toggle-checkbox:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toggle-text {
+  font-size: 13px;
+  font-weight: 650;
+  color: rgba(31, 35, 40, 0.85);
+}
+
+.max-rounds-input {
+  padding: 16px;
+  background: var(--ds-surface-2);
+  border-radius: 10px;
+  border: 1px solid var(--ds-border);
+}
+
+.max-rounds-input label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(31, 35, 40, 0.78);
+}
+
+.rounds-input {
+  padding: 8px 12px;
+  border: 1px solid var(--ds-border);
+  border-radius: 10px;
+  font-size: 13px;
+  width: 100px;
+  margin-top: 4px;
+}
+
+.rounds-input:focus {
+  outline: none;
+  border-color: var(--ds-border-strong);
+}
+
+.rounds-input:disabled {
+  background: rgba(31, 35, 40, 0.03);
+  cursor: not-allowed;
+}
+
+.input-hint {
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  color: rgba(31, 35, 40, 0.55);
+}
+
+/* API Key */
+.api-key-input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.api-key-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--ds-border);
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.api-key-input:focus {
+  outline: none;
+  border-color: var(--ds-border-strong);
+}
+
+.settings-actions-row {
+  margin-top: 14px;
+}
+
+/* Model Browser */
+.model-browser {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ds-border);
+}
+
+.model-search-input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-sm);
+  font-size: 13px;
+  background: var(--ds-surface);
+  color: var(--ds-text);
+}
+
+.model-search-input:focus {
+  outline: none;
+  border-color: var(--ds-border-strong);
+}
+
+.model-search-input::placeholder {
+  color: var(--ds-muted);
+}
+
+.model-browser-list {
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-sm);
+  background: var(--ds-surface);
+}
+
+.model-browser-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--ds-border);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.model-browser-item:last-child {
+  border-bottom: none;
+}
+
+.model-browser-item:hover {
+  background: rgba(31, 35, 40, 0.03);
+}
+
+.model-browser-item.selected {
+  background: rgba(201, 106, 58, 0.08);
+  border-left: 3px solid var(--ds-accent);
+}
+
+.model-browser-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.model-browser-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ds-text);
+}
+
+.model-browser-id {
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  color: var(--ds-muted);
+}
+
+.model-browser-provider {
+  font-size: 11px;
+  color: var(--ds-muted);
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 4px 8px;
+  background: rgba(31, 35, 40, 0.05);
+  border-radius: 4px;
+}
+
+.model-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.model-id {
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  color: var(--ds-muted);
+}
+

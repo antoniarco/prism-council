@@ -1,0 +1,177 @@
+.tab-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0 var(--spacing-4);
+  height: 56px;
+  position: relative;
+  z-index: 1000;
+  box-shadow: var(--shadow-xs);
+}
+
+.tab-navigation-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);  /* Comfortable spacing for pill-style nav items */
+  height: 100%;
+}
+
+.tab-navigation-right {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: 6px 12px;
+  user-select: none;
+  cursor: default;
+}
+
+/* Logo - navbar raster asset */
+.brand-mark {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Navbar logo - locked raster PNG with complete style isolation */
+.navbar-logo {
+  /* Locked dimensions - prevents any resizing */
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  
+  /* Proper object rendering for raster */
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  
+  /* Complete style isolation - prevents ANY appearance changes */
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
+  transform: none !important;
+  
+  /* Prevent filter effects */
+  backdrop-filter: none !important;
+  -webkit-filter: none !important;
+  
+  /* No color manipulation */
+  color: initial !important;
+  
+  /* Prevent blend modes */
+  isolation: isolate;
+  
+  /* No transitions or animations */
+  transition: none !important;
+  animation: none !important;
+  
+  /* Prevent rendering artifacts */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+  /* Force default rendering */
+  will-change: auto !important;
+  
+  /* Prevent interaction interference */
+  pointer-events: none;
+  
+  /* High-quality raster rendering */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  
+  /* Prevent image scaling artifacts */
+  -ms-interpolation-mode: bicubic;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;  /* Tighter line height for compact feel */
+}
+
+.brand-name {
+  font-size: 14px;
+  font-weight: 590;  /* Slightly heavier than body, but not fully semibold */
+  letter-spacing: -0.005em;  /* Very tight, intentional */
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.brand-tagline {
+  font-size: 10px;
+  color: var(--text-secondary);
+  letter-spacing: 0;
+  font-weight: var(--font-weight-medium);
+  margin-top: -1px;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  padding: 6px 12px;  /* px-3 py-1.5 equivalent */
+  height: auto;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  border-radius: 9999px;  /* rounded-full */
+  transition: all 150ms ease-out;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.tab-button:hover {
+  color: var(--text-primary);
+  background: var(--bg-surface-hover);
+}
+
+.tab-button.active {
+  color: var(--text-primary);
+  background: var(--bg-surface-active);
+}
+
+.tab-button:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Settings icon button - pill style to match nav items */
+.tab-button-icon {
+  background: transparent;
+  border: none;
+  padding: var(--spacing-2);
+  cursor: pointer;
+  color: var(--icon-color);
+  border-radius: 9999px;  /* rounded-full to match other nav items */
+  transition: all 150ms ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+}
+
+.tab-button-icon:hover {
+  color: var(--text-primary);
+  background: var(--bg-surface-hover);
+}
+
+.tab-button-icon.active {
+  color: var(--text-primary);
+  background: var(--bg-surface-active);
+}
+
+.tab-button-icon:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+

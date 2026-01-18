@@ -1,0 +1,116 @@
+/* Model Evaluation Stage - Component-specific styles */
+
+.model-eval-intro {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--ds-border);
+}
+
+.model-eval-explanation {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ds-text);
+}
+
+.model-eval-description {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(31, 35, 40, 0.65);
+}
+
+.model-eval-list-header {
+  font-size: 11px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: rgba(31, 35, 40, 0.55);
+  margin-bottom: 12px;
+}
+
+.model-eval-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.model-eval-item {
+  padding: 12px 14px;
+  border: 1px solid var(--ds-border);
+  border-radius: 6px;
+  background: rgba(31, 35, 40, 0.01);
+}
+
+.model-eval-item-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.model-eval-item-provider {
+  font-size: 10px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: rgba(31, 35, 40, 0.5);
+  padding: 2px 6px;
+  background: rgba(31, 35, 40, 0.05);
+  border-radius: 3px;
+}
+
+.model-eval-item-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ds-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.model-eval-item-rationale {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(31, 35, 40, 0.65);
+}
+
+.model-eval-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid var(--ds-border);
+}
+
+.model-eval-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  border: 1px solid var(--ds-border);
+}
+
+.model-eval-btn-primary {
+  background: var(--ds-surface);
+  color: var(--ds-text);
+  border-color: var(--ds-border);
+}
+
+.model-eval-btn-primary:hover {
+  background: rgba(31, 35, 40, 0.03);
+  border-color: var(--ds-border-strong);
+}
+
+.model-eval-btn-secondary {
+  background: transparent;
+  color: rgba(31, 35, 40, 0.6);
+  border-color: transparent;
+}
+
+.model-eval-btn-secondary:hover {
+  background: rgba(31, 35, 40, 0.02);
+  border-color: var(--ds-border);
+}
+

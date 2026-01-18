@@ -1,0 +1,27 @@
+.stage3 {
+  background: transparent;
+  border-color: transparent;
+}
+
+.final-response {
+  background: var(--ds-surface);
+  padding: 20px;
+  border-radius: var(--ds-radius);
+  border: 1px solid var(--ds-border);
+  box-shadow: var(--ds-shadow-sm);
+  border-left: 3px solid var(--ds-accent);
+}
+
+.chairman-label {
+  color: var(--ds-muted);
+  font-size: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.final-text {
+  color: var(--ds-text);
+  line-height: 1.7;
+  font-size: 15px;
+}

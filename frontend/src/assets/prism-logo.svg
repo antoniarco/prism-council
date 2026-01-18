@@ -1,0 +1,18 @@
+<svg width="32" height="32" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- PRISM geometric logo - clean triangular prism with internal facets -->
+  <g stroke="#1f2328" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Outer triangular prism -->
+    <path d="M 128 40 L 220 200 L 36 200 Z" />
+    
+    <!-- Internal facets creating 3D prism effect -->
+    <path d="M 128 40 L 128 160" />
+    <path d="M 128 160 L 220 200" />
+    <path d="M 128 160 L 36 200" />
+    <path d="M 70 160 L 128 120" />
+    <path d="M 186 160 L 128 120" />
+    <path d="M 128 120 L 128 160" />
+  </g>
+  
+  <!-- Bottom filled triangle for depth/shadow effect -->
+  <path d="M 128 180 L 200 200 L 56 200 Z" fill="#1f2328" fill-opacity="0.15"/>
+</svg>
