@@ -182,6 +182,49 @@ The website focuses on **system thinking and intent**.
 
 ---
 
+## Screenshots
+
+### Main Interface
+
+![Home Screen](docs/screenshots/01-home-screen.jpg)
+*Main landing page with reasoning prompt interface*
+
+![New Reasoning](docs/screenshots/02-new-reasoning.jpg)
+*Starting a new reasoning session with context and role options*
+
+### Deliberation Process
+
+![Clarification Stage](docs/screenshots/03-clarification-stage.jpg)
+*Interactive clarification questions before reasoning begins*
+
+![Briefing Summary](docs/screenshots/04-briefing-summary.jpg)
+*Structured brief generated from clarification responses*
+
+![Council Deliberation](docs/screenshots/05-council-in-progress.jpg)
+*Stage 1: Parallel reasoning across multiple models*
+
+![Individual Responses](docs/screenshots/06-individual-model-outputs.jpg)
+*Reviewing independent outputs from each council member*
+
+![Final Synthesis](docs/screenshots/07-consensus-synthesis.jpg)
+*Chairman-synthesized consensus response*
+
+### Configuration
+
+![Settings Overview](docs/screenshots/08-settings-overview.jpg)
+*System-wide settings for model orchestration and reasoning modes*
+
+![Model Selection](docs/screenshots/09-model-orchestration.jpg)
+*Configuring reasoning models, Chairman, and Analyst*
+
+![Contexts Management](docs/screenshots/10-contexts-management.jpg)
+*Creating and managing authoritative background contexts*
+
+![Roles Management](docs/screenshots/11-roles-management.jpg)
+*Defining behavioral perspectives and reasoning styles*
+
+---
+
 ## Relationship to LLM Council (Acknowledgement)
 
 PRISM Council is inspired by early open-source explorations of multi-model “council” patterns, including the *LLM Council* project.
