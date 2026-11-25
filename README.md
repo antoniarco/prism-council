@@ -1,8 +1,6 @@
 # PRISM Council
 
-**Decision-grade multi-model reasoning**
-
-PRISM Council is a decision-grade, multi-model reasoning system that orchestrates multiple frontier AI models into a structured deliberation and evaluation process.
+**PRISM Council** is a decision-grade, multi-model reasoning system that orchestrates multiple frontier AI models into a structured deliberation and evaluation process.
 
 🌐 **Project website:**  
 https://prism-thinking-layer.lovable.app/
@@ -10,54 +8,6 @@ https://prism-thinking-layer.lovable.app/
 Instead of relying on a single LLM response, PRISM Council enables **parallel, independent reasoning across many models**, followed by **blind review and consensus synthesis** — producing outputs that are more robust, explainable, and trustworthy.
 
 PRISM Council is a core mechanism within the broader **PRISM** framework, which focuses on **governance, orchestration, and evaluation of intelligence at scale**.
-
-> **PRISM transforms prompting into a structured, multi-model deliberation process that delivers consensus-driven, high-confidence AI outputs.**
-
-![PRISM Council Architecture](docs/PRISM_Council_Architecture_header.jpg)
-*Five-stage deliberation pipeline: Intent & Context Alignment → Dynamic Model Orchestration → Parallel Independent Reasoning → Blind Peer Evaluation → Consensus Synthesis*
-
----
-
-## Screenshots
-
-### Main Interface
-
-![Home Screen](docs/screenshots/01-home-screen.png)
-*Main landing page with reasoning prompt interface*
-
-![New Reasoning](docs/screenshots/02-new-reasoning.png)
-*Starting a new reasoning session with context and role options*
-
-### Deliberation Process
-
-![Clarification Stage](docs/screenshots/03-clarification-stage.png)
-*Interactive clarification questions before reasoning begins*
-
-![Briefing Summary](docs/screenshots/04-briefing-summary.png)
-*Structured brief generated from clarification responses*
-
-![Council Deliberation](docs/screenshots/05-council-in-progress.png)
-*Stage 1: Parallel reasoning across multiple models*
-
-![Individual Responses](docs/screenshots/06-individual-model-outputs.png)
-*Reviewing independent outputs from each council member*
-
-![Final Synthesis](docs/screenshots/07-consensus-synthesis.png)
-*Chairman-synthesized consensus response*
-
-### Configuration
-
-![Settings Overview](docs/screenshots/08-settings-overview.png)
-*System-wide settings for model orchestration and reasoning modes*
-
-![Model Selection](docs/screenshots/09-model-orchestration.png)
-*Configuring reasoning models, Chairman, and Analyst*
-
-![Contexts Management](docs/screenshots/10-contexts-management.png)
-*Creating and managing authoritative background contexts*
-
-![Roles Management](docs/screenshots/11-roles-management.png)
-*Defining behavioral perspectives and reasoning styles*
 
 ---
 
@@ -78,14 +28,6 @@ Instead of asking *one model* to be right, PRISM Council asks *many models* to r
 ## How It Works
 
 When you submit a query, PRISM Council runs a structured, multi-stage deliberation pipeline:
-
-### **Stage 0 — Clarification (Optional)**
-
-If Clarification-First Mode is enabled:
-- An Analyst model reviews your query for ambiguity
-- Asks clarifying questions if needed
-- Refines the query into a clear, actionable briefing
-- Proceeds to deliberation only when the request is fully understood
 
 ### **Stage 1 — Independent Reasoning**
 The same query is sent to multiple AI models in parallel.
@@ -122,38 +64,19 @@ The result is not a vote, but a **reasoned synthesis**.
 
 ---
 
-## Features
+## Key Capabilities
 
-### 🧠 Multi-Model Deliberation
-- Parallel reasoning across multiple frontier models (OpenAI, Anthropic, Google, etc.)
-- Blind peer review and ranking to reduce bias
-- Consensus synthesis by designated Chairman model
+### Multi-Model Deliberation
+- Run parallel reasoning across multiple frontier models (OpenAI, Anthropic, Google, etc.)
+- Treat models as interchangeable reasoning engines, not authorities
 
-### 💬 Conversation Management
-- Multi-turn conversations with full history
-- Auto-generated conversation titles
-- Persistent storage with archival organization
+### Blind Consensus Evaluation
+- Reduce brand and identity bias during evaluation
+- Prioritize reasoning quality over model reputation
 
-### 🎯 Contexts & Roles
-- **Contexts:** Authoritative background information that persists across conversations
-- **Roles:** Behavioral perspectives that shape reasoning style
-- Per-conversation assignment with snapshot preservation
-
-### 🔍 Clarification System
-- Optional interactive question refinement
-- Ambiguity detection and resolution
-- Analyst-driven query improvement before deliberation
-
-### ⚙️ Dynamic Model Selection
-- Browse 300+ models from OpenRouter
-- Configure reasoning models, Chairman, and Analyst
-- Per-conversation model overrides
-- Settings-based defaults with UI configuration
-
-### 📊 Transparent Reasoning
-- Inspect individual model responses
-- View peer rankings and evaluations
-- Preserve intermediate reasoning stages
+### Decision-Grade Outputs
+- Produce consolidated responses designed for action
+- Preserve intermediate reasoning and dissent when needed
 
 ---
 
@@ -180,32 +103,7 @@ Examples:
 - project goals
 - personal principles
 
----
-
-## Roles (Behavioral Perspectives)
-
-Roles allow you to define **behavioral perspectives** that guide how the models reason and respond.
-
-Roles are:
-- **Reusable** — define once, apply to any conversation
-- **Perspective-shaping** — influence reasoning style and approach
-- **Independent** — can be used with or without Contexts
-
-Examples:
-- "Think like a skeptical engineer"
-- "Respond as a strategic advisor"
-- "Reason from first principles"
-
----
-
-## Clarification System
-
-Before running the full multi-model deliberation, PRISM can optionally:
-- Ask clarifying questions to better understand your request
-- Refine ambiguous queries through interactive dialogue
-- Ensure the reasoning stage addresses your actual intent
-
-This **Clarification-First Mode** can be enabled in Settings.
+See [`CONTEXTS_FEATURE.md`](CONTEXTS_FEATURE.md) for details.
 
 ---
 
@@ -242,130 +140,62 @@ PRISM Council extends this idea by:
 
 The project uses [uv](https://docs.astral.sh/uv/) for Python project management.
 
-**Backend:**
+**Backend**
 ```bash
 uv sync
-```
 
-**Frontend:**
-```bash
+**Frontend**
 cd frontend
 npm install
 cd ..
-```
 
 ### 2. Configure API Key
-
-Create a `.env` file in the project root:
-
-```bash
 OPENROUTER_API_KEY=sk-or-v1-...
-```
 
-Get your API key at [openrouter.ai](https://openrouter.ai/).
 
-### 3. Configure Models
-
-**Recommended:** Use the **Settings interface** in the app to:
-- Browse available models from OpenRouter dynamically
-- Select reasoning models (council members)
-- Choose a Chairman model for synthesis
-- Pick an Analyst model for clarification
-
-**Alternative:** Edit default fallbacks in `backend/config.py`:
-
-```python
+### 3. Configure Models (Optional) / You can do it using Settings Interface
 COUNCIL_MODELS = [
-    "openai/gpt-4o",
-    "anthropic/claude-3.5-sonnet",
-    "google/gemini-2.0-flash-exp",
+    "openai/gpt-5.1",
+    "google/gemini-3-pro-preview",
+    "anthropic/claude-sonnet-4.5",
+    "x-ai/grok-4",
 ]
 
-CHAIRMAN_MODEL = "anthropic/claude-3.5-sonnet"
-```
-
-The app fetches available models from [OpenRouter](https://openrouter.ai/models) at runtime.
+CHAIRMAN_MODEL = "google/gemini-3-pro-preview"
 
 ## Running the Application
-
 ### Option 1 — Start Script
-
-```bash
 ./start.sh
-```
 
 ### Option 2 — Manual
-
-**Terminal 1 (Backend):**
-```bash
+#### Terminal 1 (Backend):
 uv run python -m backend.main
-```
 
-**Terminal 2 (Frontend):**
-```bash
+#### Terminal 2 (Frontend):
 cd frontend
 npm run dev
-```
 
-Open http://localhost:5173 in your browser.
+Open:
+http://localhost:5173
 
 ## Tech Stack
 
-- **Backend:** 
-  - FastAPI (Python 3.10+)
-  - async httpx for API calls
-  - Pydantic for data validation
-  - OpenRouter API integration
-  - JSON-based storage (conversations, contexts, roles, settings)
+Backend: FastAPI (Python 3.10+), async httpx, OpenRouter API
 
-- **Frontend:** 
-  - React 19
-  - Vite (dev server + build tool)
-  - react-markdown for response rendering
-  - Native CSS (design token system)
+Frontend: React + Vite, react-markdown
 
-- **Tooling:** 
-  - uv (Python dependency management)
-  - npm (JavaScript dependency management)
-  - ESLint (frontend linting)
+Storage: JSON-based conversation persistence
 
-## Project Structure
+Tooling: uv (Python), npm (JavaScript)
 
-```
-prism-council/
-├── backend/               # FastAPI backend
-│   ├── main.py           # API endpoints & server
-│   ├── council.py        # 3-stage deliberation logic
-│   ├── clarification.py  # Interactive query refinement
-│   ├── model_picker.py   # Dynamic model selection
-│   ├── openrouter.py     # OpenRouter API client
-│   ├── storage.py        # Conversation persistence
-│   ├── context_storage.py
-│   ├── role_storage.py
-│   ├── settings_storage.py
-│   └── config.py         # Configuration & defaults
-├── frontend/             # React + Vite frontend
-│   ├── src/
-│   │   ├── components/   # UI components
-│   │   ├── api.js        # Backend API client
-│   │   ├── App.jsx       # Main app component
-│   │   └── index.css     # Design token system
-│   └── public/           # Static assets
-├── data/                 # Runtime data (gitignored)
-│   ├── conversations/    # Conversation history
-│   ├── contexts/         # Saved contexts
-│   ├── roles/            # Saved roles
-│   └── settings.json     # User settings
-├── .env                  # API keys (gitignored)
-├── start.sh              # Quick start script
-└── pyproject.toml        # Python dependencies
-```
-
-## Project Status
+# Project Status
 
 PRISM Council is an experimental but structured exploration of decision-grade multi-model reasoning.
 
 The goal is not to replace individual LLMs, but to govern how they are used when correctness, robustness, and transparency matter.
 
-For conceptual background, system diagrams, and positioning:  
+For conceptual background, system diagrams, and positioning:
 🌐 https://prism-thinking-layer.lovable.app/
+
+
+
